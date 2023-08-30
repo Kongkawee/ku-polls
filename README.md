@@ -20,4 +20,4 @@ All project documents are in the [Project Wiki](../../wiki/Home).
 - [Iteration 1 Plan](../../wiki/Iteration-1-Plan)
 - [Task Board](https://github.com/users/Kongkawee/projects/1/views/2)
 
-[django-tutorial]: TODO-write-the-django-tutorial-URL-here
+[django-tutorial]: https://docs.djangoproject.com/en/4.1/intro/tutorial01/
