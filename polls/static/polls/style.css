@@ -1,0 +1,22 @@
+li a {
+    color: white;
+}
+
+.title {
+    color: white;
+    font-size: 40px;
+}
+
+body {
+    background: white url("images/background.png") no-repeat;
+}
+
+.poll-item {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.choice {
+    color: white;
+    font-size: 20px;
+}

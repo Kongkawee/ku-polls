@@ -1,0 +1,108 @@
+[
+{
+  "model": "polls.question",
+  "pk": 6,
+  "fields": {
+    "question_text": "What social media platform do you use the most recently?",
+    "pub_date": "2023-09-02T22:06:43Z"
+  }
+},
+{
+  "model": "polls.question",
+  "pk": 7,
+  "fields": {
+    "question_text": "What movies or series streaming application do you like the most?",
+    "pub_date": "2023-09-02T22:11:27Z"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 7,
+  "fields": {
+    "question": 7,
+    "choice_text": "Netflix",
+    "votes": 2
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 8,
+  "fields": {
+    "question": 7,
+    "choice_text": "Disney Plus",
+    "votes": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 9,
+  "fields": {
+    "question": 7,
+    "choice_text": "HBO GO",
+    "votes": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 10,
+  "fields": {
+    "question": 7,
+    "choice_text": "Amazon Prime",
+    "votes": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 11,
+  "fields": {
+    "question": 7,
+    "choice_text": "Others",
+    "votes": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 12,
+  "fields": {
+    "question": 6,
+    "choice_text": "Facebook",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 13,
+  "fields": {
+    "question": 6,
+    "choice_text": "Instagram",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 14,
+  "fields": {
+    "question": 6,
+    "choice_text": "X ( twitter )",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 15,
+  "fields": {
+    "question": 6,
+    "choice_text": "Line",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 16,
+  "fields": {
+    "question": 6,
+    "choice_text": "Others",
+    "votes": 0
+  }
+}
+]
