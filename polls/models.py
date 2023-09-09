@@ -14,8 +14,8 @@ class Question(models.Model):
         was_published_recently: Returns a boolean indicating whether this poll question is currently published or not.
     """
     question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published', auto_now_add=True)
-    end_date = models.DateTimeField('date suppressed', null=True)
+    pub_date = models.DateTimeField('date published', default=timezone.now)
+    end_date = models.DateTimeField('date suppressed', null=True, default=None)
 
     def __str__(self):
         return self.question_text
@@ -39,6 +39,8 @@ class Question(models.Model):
 
     def can_vote(self):
         now = timezone.now()
+        if self.end_date is None:
+            return self.is_published()
         return self.is_published() and now < self.end_date
 
 
