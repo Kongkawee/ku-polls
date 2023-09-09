@@ -33,9 +33,17 @@ class DetailView(generic.DetailView):
         return Question.objects.filter(pub_date__lte=timezone.now())
 
     def get(self, request, *args, **kwargs):
-        if Http404:
+        try:
+            self.object = self.get_object()
+            if not self.object.can_vote():
+                messages.error(request, "This poll is currently closed.")
+                return redirect('polls:index')
+        except Http404:
             messages.error(request, "This poll is not available.")
             return redirect('polls:index')
+
+        context = self.get_context_data(object=self.object)
+        return self.render_to_response(context)
 
 
 class ResultsView(generic.DetailView):
