@@ -7,9 +7,12 @@
 </h1>
 
 {% if latest_question_list %}
-    <ul>
+    <ul class="polls list">
     {% for question in latest_question_list %}
-        <li class="poll-item"><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+        <li class="poll-item"><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/polls/{{ question.id }}/results/"> result </a>
+        </li>
     {% endfor %}
     </ul>
 {% else %}
