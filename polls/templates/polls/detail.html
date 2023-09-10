@@ -6,11 +6,15 @@
 {% csrf_token %}
 <fieldset>
     <legend><h1 class="title">{{ question.question_text }}</h1></legend>
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+    {% if error_message %}
+        <p class="choice"><strong>{{ error_message }}</strong></p>
+    {% endif %}
     {% for choice in question.choice_set.all %}
-        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" class="button">
         <label for="choice{{ forloop.counter }}" class="choice">{{ choice.choice_text }}</label><br>
     {% endfor %}
 </fieldset>
-<input type="submit" value="Vote">
+    <input type="submit" value="Vote" class="button">
 </form>
+<a href="/polls/{{ question.id }}/results/" class="choice"> result </a><br>
+<a href="/polls/" class="choice">Back to Main</a>

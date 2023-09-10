@@ -1,7 +1,3 @@
-li a {
-    color: white;
-}
-
 .title {
     color: white;
     font-size: 40px;
@@ -11,12 +7,17 @@ body {
     background: white url("images/background.png") no-repeat;
 }
 
-.poll-item {
-    margin-bottom: 20px;
+.choice {
+    color: white;
     font-size: 25px;
 }
 
-.choice {
-    color: white;
+.message {
+    color: red;
+    font-size: 20px;
+}
+
+.button {
+    color: black;
     font-size: 20px;
 }

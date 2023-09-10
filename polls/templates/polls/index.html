@@ -6,12 +6,36 @@
     KU-POLLS
 </h1>
 
+<body>
 {% if latest_question_list %}
-    <ul>
+    <table>
+        <tr>
+            <th style="color: white; font-size: 25px;">Question</th>
+            <th style="color: white; font-size: 25px; padding-left: 100px;">Results</th>
+        </tr>
     {% for question in latest_question_list %}
-        <li class="poll-item"><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+        <tr>
+            <td><a href="/polls/{{ question.id }}/" style="color: white; font-size: 25px;">
+                {{ question.question_text }}</a></td>
+            <td style="padding-left: 100px;"><a href="/polls/{{ question.id }}/results/" style="color: white; font-size: 25px;">
+                Results</a></td>
+        </tr>
     {% endfor %}
-    </ul>
+    </table>
 {% else %}
-    <p>No polls are available.</p>
+    <p style="color: white; font-size: 25px;">No polls are available.</p>
 {% endif %}
+</body>
+
+{% if messages %}
+<ul style="color: red; font-size: 20px;">
+    {% for message in messages %}
+    <li style="color: red; font-size: 20px;">
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %} {% endif %}
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
