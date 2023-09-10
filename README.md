@@ -1,5 +1,7 @@
 ## KU Polls: Online Survey Questions 
 
+[![Unit tests](https://github.com/Kongkawee/ku-polls/actions/workflows/unittest.yml/badge.svg)](https://github.com/Kongkawee/ku-polls/actions/workflows/unittest.yml)
+
 The web application for online survey questions, wrote with Python and [Django](https://www.djangoproject.com/) web framework.
 It is based on [Django Tutorial project][django-tutorial] with additional features.
 
