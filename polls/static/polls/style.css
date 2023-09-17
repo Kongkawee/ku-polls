@@ -30,3 +30,11 @@ body {
     color: pink;
     font-size: 25px;
 }
+
+#title {
+    padding: 5px;
+}
+
+#welcome {
+    padding: 5px;
+}
