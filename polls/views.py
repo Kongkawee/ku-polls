@@ -47,17 +47,24 @@ class DetailView(generic.DetailView):
         Receive the request from the user and catch
         the direct-access attempt to the unpublished polls.
         """
+
         try:
-            self.object = self.get_object()
-            if not self.object.can_vote():
-                messages.error(request, "This poll is currently closed.")
-                return redirect('polls:index')
+            question = get_object_or_404(Question, pk=kwargs["pk"])
         except Http404:
-            messages.error(request, "This poll is not available.")
+            messages.error(request, f"Poll {kwargs['pk']} is not available.")
             return redirect('polls:index')
 
-        context = self.get_context_data(object=self.object)
-        return self.render_to_response(context)
+        try:
+            vote = Vote.objects.get(user=request.user, choice__in=question.choice_set.all())
+            previously_selected = vote.choice
+        except (Vote.DoesNotExist, TypeError):
+            previously_selected = None
+
+        if not question.can_vote():
+            messages.error(request, "This poll is currently closed.")
+            return redirect('polls:index')
+
+        return render(request, self.template_name, {"question": question, "previously_selected": previously_selected})
 
 
 class ResultsView(generic.DetailView):
@@ -111,7 +118,7 @@ def signup(request):
             username = form.cleaned_data.get('username')
             # password input field is named 'password1'
             raw_passwd = form.cleaned_data.get('password1')
-            user = authenticate(username=username,password=raw_passwd)
+            user = authenticate(username=username, password=raw_passwd)
             login(request, user)
             return redirect('polls:index')
         # what if form is not valid?

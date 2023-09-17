@@ -43,10 +43,15 @@
         <p class="choice"><strong>{{ error_message }}</strong></p>
     {% endif %}
     {% for choice in question.choice_set.all %}
-        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" class="button">
+        {% if choice == previously_selected %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" class="button" checked>
+        {% else %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" class="button">
+        {% endif %}
         <label for="choice{{ forloop.counter }}" class="choice">{{ choice.choice_text }}</label><br>
     {% endfor %}
 </fieldset>
+
     <input type="submit" value="Vote" class="button">
 </form>
 <a href="/polls/{{ question.id }}/results/" class="choice"> result </a><br>
