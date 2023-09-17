@@ -21,6 +21,14 @@ All project documents are in the [Project Wiki](../../wiki/Home).
 - [Development Plan](../../wiki/Development%20Plan)
 - [Iteration 1 Plan](../../wiki/Iteration-1-Plan)
 - [Iteration 2 Plan](../../wiki/Iteration-2-Plan)
+- [Iteration 3 Plan](../../wiki/Iteration-3-Plan)
 - [Task Board](https://github.com/users/Kongkawee/projects/1/views/2)
+
+Demonstation User
+
+| Username | Password      |
+|----------|---------------|
+| suzune   | Helloworld123 |
+| jerry    | Demopass123   |
 
 [django-tutorial]: https://docs.djangoproject.com/en/4.1/intro/tutorial01/
