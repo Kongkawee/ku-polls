@@ -21,3 +21,20 @@ body {
     color: black;
     font-size: 20px;
 }
+
+.welcome {
+    color: white;
+}
+
+.vote-confirm {
+    color: pink;
+    font-size: 25px;
+}
+
+#title {
+    padding: 5px;
+}
+
+#welcome {
+    padding: 5px;
+}

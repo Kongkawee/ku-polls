@@ -1,0 +1,156 @@
+[
+{
+  "model": "polls.question",
+  "pk": 5,
+  "fields": {
+    "question_text": "What grade do you want for ISP?",
+    "pub_date": "2023-09-10T07:30:05Z",
+    "end_date": null
+  }
+},
+{
+  "model": "polls.question",
+  "pk": 6,
+  "fields": {
+    "question_text": "What donut brand do you prefer?",
+    "pub_date": "2023-09-10T07:31:05Z",
+    "end_date": null
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 14,
+  "fields": {
+    "question": 5,
+    "choice_text": "A"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 15,
+  "fields": {
+    "question": 5,
+    "choice_text": "B, B+"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 16,
+  "fields": {
+    "question": 5,
+    "choice_text": "C, C+"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 17,
+  "fields": {
+    "question": 5,
+    "choice_text": "D, D+"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 18,
+  "fields": {
+    "question": 5,
+    "choice_text": "F"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 19,
+  "fields": {
+    "question": 6,
+    "choice_text": "Dunkin' Donuts"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 20,
+  "fields": {
+    "question": 6,
+    "choice_text": "Mister Donuts"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 21,
+  "fields": {
+    "question": 6,
+    "choice_text": "Krispy Kreme"
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 1,
+  "fields": {
+    "choice": 20,
+    "user": 2
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 2,
+  "fields": {
+    "choice": 14,
+    "user": 2
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 3,
+  "fields": {
+    "choice": 21,
+    "user": 3
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 4,
+  "fields": {
+    "choice": 18,
+    "user": 3
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 5,
+  "fields": {
+    "choice": 19,
+    "user": 1
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 6,
+  "fields": {
+    "choice": 19,
+    "user": 5
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 7,
+  "fields": {
+    "choice": 14,
+    "user": 5
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 8,
+  "fields": {
+    "choice": 20,
+    "user": 7
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 9,
+  "fields": {
+    "choice": 15,
+    "user": 7
+  }
+}
+]
