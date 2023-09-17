@@ -4,12 +4,6 @@
 
 <h1 class="title">{{ question.question_text }}</h1>
 
-<!--<ul style="color: pink; font-size: 25px">-->
-<!--    {% if not vote %}-->
-<!--        <li> Thanks for vote - You have voted for </li>-->
-<!--    {% endif %}-->
-<!--</ul>-->
-
 {% if messages %}
     <ul class="vote-confirm" style="color: pink; font-size: 25px">
         {% for message in messages %}
@@ -17,8 +11,6 @@
         {% endfor %}
     </ul>
 {% endif %}
-
-
 
 <ul class="choice">
 {% for choice in question.choice_set.all %}
