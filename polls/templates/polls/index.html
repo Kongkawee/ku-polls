@@ -10,7 +10,7 @@
     {% if user.is_authenticated %}
         <a>Welcome back, {{ user.username.title }}</a>
     {% else %}
-        Please <a href="{% url 'login' %}">Login</a>
+        Please <a href="{% url 'login' %}" style="color: orange;">Login</a>
     {% endif %}
 </h2>
 
