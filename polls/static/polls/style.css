@@ -25,3 +25,8 @@ body {
 .welcome {
     color: white;
 }
+
+.vote-confirm {
+    color: pink;
+    font-size: 25px;
+}
