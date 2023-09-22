@@ -76,7 +76,7 @@
 for the rest of the instructions instead. Also, use `pip3` instead of `pip`.
    2. Activate the virtual environment by running:
       ```
-      .\venv\Scripts\activate
+      venv\Scripts\activate
       ```
    3. Install some requirements.
       ```
