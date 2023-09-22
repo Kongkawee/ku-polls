@@ -39,8 +39,10 @@
 {% csrf_token %}
 <fieldset>
     <legend><h1 class="title">{{ question.question_text }}</h1></legend>
-    {% if error_message %}
-        <p class="choice"><strong>{{ error_message }}</strong></p>
+    {% if messages %}
+        {% for msg in messages %}
+            <p class="message"><strong>{{ msg }}</strong></p>
+        {% endfor %}
     {% endif %}
     {% for choice in question.choice_set.all %}
         {% if choice == previously_selected %}
@@ -54,5 +56,5 @@
 
     <input type="submit" value="Vote" class="button">
 </form>
-<a href="/polls/{{ question.id }}/results/" class="choice"> result </a><br>
+<a href="/polls/{{ question.id }}/results/" class="choice"> Result </a><br>
 <a href="/polls/" class="choice">Back to Main</a>
