@@ -55,7 +55,8 @@ class DetailView(generic.DetailView):
             return redirect('polls:index')
 
         try:
-            vote = Vote.objects.get(user=request.user, choice__in=question.choice_set.all())
+            vote = Vote.objects.get(user=request.user,
+                                    choice__in=question.choice_set.all())
             previously_selected = vote.choice
         except (Vote.DoesNotExist, TypeError):
             previously_selected = None
@@ -64,7 +65,9 @@ class DetailView(generic.DetailView):
             messages.error(request, "This poll is currently closed.")
             return redirect('polls:index')
 
-        return render(request, self.template_name, {"question": question, "previously_selected": previously_selected})
+        return render(request, self.template_name, {"question": question,
+                                                    "previously_selected":
+                                                        previously_selected})
 
 
 class ResultsView(generic.DetailView):
@@ -81,7 +84,7 @@ def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
 
     if not question.can_vote():
-        messages.error(request, f"This poll does not allow to vote.")
+        messages.error(request, "This poll does not allow to vote.")
         return redirect("polls:index")
 
     try:
