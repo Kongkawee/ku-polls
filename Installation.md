@@ -56,4 +56,54 @@
       ```
 
 ### Installation for Windows
-3. Set Up virtual environment.
+
+1. Open your terminal or Command Prompt.
+2. Clone this repository on your computer.
+   ```
+   git clone https://github.com/Kongkawee/ku-polls.git
+   ```
+3. Open the repository in your terminal.
+   ```
+   cd ku-polls
+   ```
+
+4. Set Up virtual environment.
+   1. Create your virtual environment.
+      ```
+      python -m venv venv
+      ```
+   > Note: If you cannot use the `python` command, use `python3` 
+for the rest of the instructions instead. Also, use `pip3` instead of `pip`.
+   2. Activate the virtual environment by running:
+      ```
+      .\venv\Scripts\activate
+      ```
+   3. Install some requirements.
+      ```
+      pip install -r requirements.txt
+      ```
+5. Create a `.env` file using the provided `sample.env` file.
+   ```
+   copy sample.env .env
+   ```
+6. Follow the instructions in the `.env` file to set up externalized variables.
+
+7. Set Up the database and data.
+   1. Run migrations to set up your database.
+      ```
+      python manage.py migrate
+      ```
+   2. Load data.
+      ```
+      python manage.py loaddata data\polls.json
+      python manage.py loaddata data\users.json
+      ```
+8. Try to run tests; all tests should pass.
+   ```
+   python manage.py test polls
+   ```
+9. Run the program.
+   ```
+   python manage.py runserver
+   ```
+
