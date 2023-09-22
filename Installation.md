@@ -25,7 +25,7 @@
    of the instruction instead. And also `pip3` instead of `pip`.
    2. Activate the virtual environment by running:
       ```
-      . env/bin/activate 
+      . venv/bin/activate 
       ```
    3. Install some requirements.
       ```
