@@ -25,7 +25,7 @@ class IndexView(generic.ListView):
         """
         return Question.objects.filter(
             pub_date__lte=timezone.now()
-        ).order_by('-pub_date')[:5]
+        ).order_by('-pub_date')
 
 
 class DetailView(generic.DetailView):
@@ -55,7 +55,8 @@ class DetailView(generic.DetailView):
             return redirect('polls:index')
 
         try:
-            vote = Vote.objects.get(user=request.user, choice__in=question.choice_set.all())
+            vote = Vote.objects.get(user=request.user,
+                                    choice__in=question.choice_set.all())
             previously_selected = vote.choice
         except (Vote.DoesNotExist, TypeError):
             previously_selected = None
@@ -64,7 +65,9 @@ class DetailView(generic.DetailView):
             messages.error(request, "This poll is currently closed.")
             return redirect('polls:index')
 
-        return render(request, self.template_name, {"question": question, "previously_selected": previously_selected})
+        return render(request, self.template_name, {"question": question,
+                                                    "previously_selected":
+                                                        previously_selected})
 
 
 class ResultsView(generic.DetailView):
@@ -80,14 +83,16 @@ def vote(request, question_id):
     """
     question = get_object_or_404(Question, pk=question_id)
 
+    if not question.can_vote():
+        messages.error(request, "This poll does not allow to vote.")
+        return redirect("polls:index")
+
     try:
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
-        # Redisplay the question voting form.
-        return render(request, 'polls/detail.html', {
-            'question': question,
-            'error_message': "You didn't select a choice.",
-        })
+        messages.error(request, "Please select choice before submit the vote.")
+        return redirect("polls:detail", pk=question_id)
+
     this_user = request.user
 
     try:

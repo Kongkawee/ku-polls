@@ -30,7 +30,7 @@
   "pk": 15,
   "fields": {
     "question": 5,
-    "choice_text": "B, B+"
+    "choice_text": "B+"
   }
 },
 {
@@ -38,7 +38,7 @@
   "pk": 16,
   "fields": {
     "question": 5,
-    "choice_text": "C, C+"
+    "choice_text": "B"
   }
 },
 {
@@ -46,7 +46,7 @@
   "pk": 17,
   "fields": {
     "question": 5,
-    "choice_text": "D, D+"
+    "choice_text": "C+"
   }
 },
 {
@@ -54,7 +54,7 @@
   "pk": 18,
   "fields": {
     "question": 5,
-    "choice_text": "F"
+    "choice_text": "C"
   }
 },
 {
@@ -79,6 +79,62 @@
   "fields": {
     "question": 6,
     "choice_text": "Krispy Kreme"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 22,
+  "fields": {
+    "question": 6,
+    "choice_text": "Other"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 23,
+  "fields": {
+    "question": 5,
+    "choice_text": "D+"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 24,
+  "fields": {
+    "question": 5,
+    "choice_text": "D"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 25,
+  "fields": {
+    "question": 5,
+    "choice_text": "F"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 26,
+  "fields": {
+    "question": 5,
+    "choice_text": "I"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 27,
+  "fields": {
+    "question": 5,
+    "choice_text": "W"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 28,
+  "fields": {
+    "question": 5,
+    "choice_text": "Other"
   }
 },
 {
@@ -117,7 +173,7 @@
   "model": "polls.vote",
   "pk": 5,
   "fields": {
-    "choice": 19,
+    "choice": 20,
     "user": 1
   }
 },
@@ -141,7 +197,7 @@
   "model": "polls.vote",
   "pk": 8,
   "fields": {
-    "choice": 20,
+    "choice": 21,
     "user": 7
   }
 },
@@ -151,6 +207,14 @@
   "fields": {
     "choice": 15,
     "user": 7
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 10,
+  "fields": {
+    "choice": 26,
+    "user": 1
   }
 }
 ]

@@ -22,8 +22,7 @@
   "pk": 14,
   "fields": {
     "question": 5,
-    "choice_text": "A",
-    "votes": 0
+    "choice_text": "A"
   }
 },
 {
@@ -31,8 +30,7 @@
   "pk": 15,
   "fields": {
     "question": 5,
-    "choice_text": "B, B+",
-    "votes": 0
+    "choice_text": "B+"
   }
 },
 {
@@ -40,8 +38,7 @@
   "pk": 16,
   "fields": {
     "question": 5,
-    "choice_text": "C, C+",
-    "votes": 0
+    "choice_text": "B"
   }
 },
 {
@@ -49,8 +46,7 @@
   "pk": 17,
   "fields": {
     "question": 5,
-    "choice_text": "D, D+",
-    "votes": 0
+    "choice_text": "C+"
   }
 },
 {
@@ -58,8 +54,7 @@
   "pk": 18,
   "fields": {
     "question": 5,
-    "choice_text": "F",
-    "votes": 0
+    "choice_text": "C"
   }
 },
 {
@@ -67,8 +62,7 @@
   "pk": 19,
   "fields": {
     "question": 6,
-    "choice_text": "Dunkin' Donuts",
-    "votes": 0
+    "choice_text": "Dunkin' Donuts"
   }
 },
 {
@@ -76,8 +70,7 @@
   "pk": 20,
   "fields": {
     "question": 6,
-    "choice_text": "Mister Donuts",
-    "votes": 0
+    "choice_text": "Mister Donuts"
   }
 },
 {
@@ -85,8 +78,63 @@
   "pk": 21,
   "fields": {
     "question": 6,
-    "choice_text": "Krispy Kreme",
-    "votes": 0
+    "choice_text": "Krispy Kreme"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 22,
+  "fields": {
+    "question": 6,
+    "choice_text": "Other"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 23,
+  "fields": {
+    "question": 5,
+    "choice_text": "D+"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 24,
+  "fields": {
+    "question": 5,
+    "choice_text": "D"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 25,
+  "fields": {
+    "question": 5,
+    "choice_text": "F"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 26,
+  "fields": {
+    "question": 5,
+    "choice_text": "I"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 27,
+  "fields": {
+    "question": 5,
+    "choice_text": "W"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 28,
+  "fields": {
+    "question": 5,
+    "choice_text": "Other"
   }
 }
 ]

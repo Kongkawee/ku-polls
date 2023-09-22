@@ -5,6 +5,8 @@
 
 body {
     background: white url("images/background.png") no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
 .choice {
