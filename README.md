@@ -28,6 +28,15 @@ https://cpske.github.io/ISP) course at Kasetsart University.
    ```
 3. Browse the application on a web browser at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
+> Note: You can use the demonstration account below or sign up on the sign-up page.
+
+### Demonstration User
+
+| Username | Password      |
+|----------|---------------|
+| suzune   | Helloworld123 |
+| jerry    | Demopass123   |
+
 ## Project Documents
 
 All project documents are in the [Project Wiki](../../wiki/Home).
@@ -40,12 +49,5 @@ All project documents are in the [Project Wiki](../../wiki/Home).
 - [Iteration 3 Plan](../../wiki/Iteration-3-Plan)
 - [Iteration 4 Plan](../../wiki/Iteration-4-Plan)
 - [Task Board](https://github.com/users/Kongkawee/projects/1/views/2)
-
-Demonstation User
-
-| Username | Password      |
-|----------|---------------|
-| suzune   | Helloworld123 |
-| jerry    | Demopass123   |
 
 [django-tutorial]: https://docs.djangoproject.com/en/4.1/intro/tutorial01/
