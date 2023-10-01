@@ -43,7 +43,7 @@
       ```
    2. Load data.
       ```
-      python manage.py loaddata data/polls.json
+      python manage.py loaddata data/polls_no_votes.json
       python manage.py loaddata data/users.json
       ```
 7. Try to run tests, All test should be passes.
