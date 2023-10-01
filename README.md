@@ -15,7 +15,7 @@ https://cpske.github.io/ISP) course at Kasetsart University.
 1. Activate virtual environment.  
     For MacOS / Linux.
    ```
-   . env/bin/activate
+   . venv/bin/activate
    ```
     For Windows.
    ```
